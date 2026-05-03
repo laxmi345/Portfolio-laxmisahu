@@ -142,6 +142,20 @@ body {
     box-shadow: none;
     color: #fff;
 }
+form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important; /* Isse text white-grey dikhega */
+    opacity: 1 !important; /* Browser compatibility ke liye */
+}
+
+/* Jab aap box ke andar click karein tab bhi placeholder na chhup jaye */
+.form-control:focus::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Chrome, Safari aur Edge ke liye alag se */
+.form-control::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
 
 /* --- Animations --- */
 @keyframes fadeInUp {
